@@ -16,7 +16,7 @@ export const dishes: Dish[] = [
   {
     id: 2,
     image: '/images/Sautè di cozze e vongole.jpg',
-    name: 'Sauté di cozze e vongole',
+    name: 'Sautè di cozze e vongole',
     tag: 'Salato',
   },
   {
@@ -51,8 +51,8 @@ export const dishes: Dish[] = [
   },
   {
     id: 8,
-    image: '/images/Spaghetti alla scogliera.jpg',
-    name: 'Spaghetti alla scogliera',
+    image: '/images/Scialatielli alle vongole.jpg',
+    name: 'Scialatielli alle vongole',
     tag: 'Salato',
   },
 
