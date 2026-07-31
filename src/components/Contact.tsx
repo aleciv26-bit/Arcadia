@@ -13,11 +13,6 @@ const contactItems = [
     value: '351 491 7569',
     href: 'tel:+393514917569',
   },
-  {
-    icon: Euro,
-    label: 'Prezzo medio',
-    value: '10-20 € a persona',
-  },
 ];
 
 export default function Contact() {
