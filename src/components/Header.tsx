@@ -48,16 +48,21 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Link Social Desktop */}
         <div className="hidden items-center gap-4 lg:flex">
           <a
-            href="#"
+            href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
             className="text-cream-100/80 transition-colors hover:text-honey-300"
           >
             <Instagram className="h-5 w-5" />
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/p/Pizzeria-Arcadia-Povoletto-100063693066513/?locale=it_IT"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Facebook"
             className="text-cream-100/80 transition-colors hover:text-honey-300"
           >
@@ -92,16 +97,21 @@ export default function Header() {
               {link.label}
             </a>
           ))}
+          {/* Link Social Mobile */}
           <div className="mt-2 flex items-center gap-4 px-4 pb-4">
             <a
-              href="#"
+              href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-cream-100/80 transition-colors hover:text-honey-300"
             >
               <Instagram className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/p/Pizzeria-Arcadia-Povoletto-100063693066513/?locale=it_IT"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="text-cream-100/80 transition-colors hover:text-honey-300"
             >
