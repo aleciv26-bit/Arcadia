@@ -16,8 +16,7 @@ export default function Menu({ onOpenModal }: MenuSectionProps) {
             Creazioni da provare
           </h2>
           <p className="mt-4 max-w-xl text-cream-300">
-            Una selezione delle nostre pizze e piatti speciali. Prezzo medio
-            10-20 € a persona.
+            Una selezione delle nostre pizze e piatti speciali.
           </p>
           <button onClick={onOpenModal} className="btn-primary mt-8">
             <Download className="h-4 w-4" />
