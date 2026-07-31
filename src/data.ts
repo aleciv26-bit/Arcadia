@@ -8,41 +8,72 @@ export type Dish = {
 };
 
 export const dishes: Dish[] = [
+  // --- SALATO ---
   {
     id: 1,
-    image: '/images/dish-1.jpg',
-    name: 'Marghereta Arcadia',
-    description:
-      'Pomodoro San Marzano DOP, mozzarella fior di latte, basilico fresco. Impasto ad alta idratazione, 48h di lievitazione.',
-    price: '12 €',
-    tag: 'Classica',
+    image: '/images/mezzelune-branzino.jpg', // Modifica il nome del file con il tuo reale
+    name: 'Mezzelune ripiene al branzino',
+    description: 'Pasta fresca ripiena di delicato branzino, servita con un condimento leggero.',
+    price: '16 €', // Inserisci il prezzo corretto
+    tag: 'Salato',
   },
   {
     id: 2,
-    image: '/images/dish-2.jpg',
-    name: 'Diavola del Bosco',
-    description:
-      'Pomodoro, mozzarella, salame piccante, funghi porcini, miele al rosmarino. Un incontro di dolce e piccante.',
-    price: '15 €',
-    tag: 'Speciale',
+    image: '/images/saute-cozze-vongole.jpg',
+    name: 'Sauté di cozze e vongole',
+    description: 'Cozze e vongole fresche saltate in padella con aglio, prezzemolo e crostini di pane.',
+    price: '14 €',
+    tag: 'Salato',
   },
   {
     id: 3,
-    image: '/images/dish-3.jpg',
-    name: 'Senza Glutine del Contadino',
-    description:
-      'Impasto senza glutine a base di riso e quinoa, verdure di stagione, stracchino e crudo di Parma 24 mesi.',
-    price: '14 €',
-    tag: 'Gluten-Free',
+    image: '/images/spaghetti-scogliera.jpg',
+    name: 'Spaghetti alla scogliera',
+    description: 'Spaghetti trafilati al bronzo con frutti di mare freschi e pomodorini sfumati al vino bianco.',
+    price: '18 €',
+    tag: 'Salato',
   },
   {
     id: 4,
-    image: '/images/dish-4.jpg',
-    name: 'Tagliatelle al Tartufo',
-    description:
-      'Pasta fresca tirata a mano, crema di parmigiano 30 mesi, tartufo nero estivo. Un classico del territorio.',
-    price: '18 €',
-    tag: 'Stagionale',
+    image: '/images/zuppa-pesce.jpg',
+    name: 'Zuppa di Pesce',
+    description: 'Ricca e gustosa zuppa con il pescato del giorno servita con crostini dorati.',
+    price: '20 €',
+    tag: 'Salato',
+  },
+
+  // --- DOLCI ---
+  {
+    id: 5,
+    image: '/images/cheesecake-frutti-bosco.jpg',
+    name: 'Cheesecake ai frutti di bosco',
+    description: 'Cremosa cheesecake artigianale arricchita con una salsa ai frutti di bosco freschi.',
+    price: '6 €',
+    tag: 'Dessert',
+  },
+  {
+    id: 6,
+    image: '/images/mousse-tre-cioccolati.jpg',
+    name: 'Mousse ai tre cioccolati',
+    description: 'Delicata mousse a tre strati: cioccolato fondente, al latte e bianco.',
+    price: '7 €',
+    tag: 'Dessert',
+  },
+  {
+    id: 7,
+    image: '/images/souffle-cioccolato.jpg',
+    name: 'Soufflé al cioccolato con cuore caldo',
+    description: 'Soffice tortino al cioccolato servito caldo con cuore cremoso e fondente.',
+    price: '7 €',
+    tag: 'Dessert',
+  },
+  {
+    id: 8,
+    image: '/images/tiramisu.jpg',
+    name: 'Tiramisù',
+    description: 'Il classico dessert italiano fatto in casa con crema al mascarpone e caffè.',
+    price: '6 €',
+    tag: 'Dessert',
   },
 ];
 
