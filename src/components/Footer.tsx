@@ -16,14 +16,15 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a 
-            href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            aria-label="Instagram"
+              href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="Instagram"
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <!-- Link Facebook -->
+
+            {/* Link Facebook */}
             <a 
               href="https://www.facebook.com/p/Pizzeria-Arcadia-Povoletto-100063693066513/?locale=it_IT" 
               target="_blank" 
