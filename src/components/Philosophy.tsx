@@ -4,7 +4,7 @@ const pillars = [
   {
     icon: Wheat,
     title: 'Impasti ad Alta Digeribilità',
-    text: 'Lievitazioni lunghe fino a 48 ore e farine selezionate per un impasto leggero, fragrante e facilmente digeribile.',
+    text: 'Lievitazioni lunghe e farine selezionate per un impasto leggero, fragrante e facilmente digeribile.',
   },
   {
     icon: Leaf,
@@ -14,7 +14,7 @@ const pillars = [
   {
     icon: Sparkles,
     title: 'Ingredienti Selezionati',
-    text: 'Materie prime di stagione, provenienza locale e filiera corta. Il gusto autentico parte dalla qualità.',
+    text: 'Materie prime di stagione. Il gusto autentico parte dalla qualità.',
   },
 ];
 
