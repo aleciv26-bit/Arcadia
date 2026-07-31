@@ -34,8 +34,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-wood-700 pt-6 text-center text-xs text-cream-400">
           <p>
-            Via Udine, 13, 33040 Povoletto (UD) · Tel. 351 491 7569 · Prezzo medio
-            10-20 €
+            Via Udine, 13, 33040 Povoletto (UD) · Tel. 351 491 7569
           </p>
           <p className="mt-2">
             © {new Date().getFullYear()} Arcadia Ristorante Pizzeria. Tutti i
