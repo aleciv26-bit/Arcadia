@@ -1,4 +1,4 @@
-import { MapPin, Phone, Euro, Star, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Star, Instagram, Facebook } from 'lucide-react';
 
 const contactItems = [
   {
@@ -77,14 +77,18 @@ export default function Contact() {
                 Seguici:
               </span>
               <a
-                href="#"
+                href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-terracotta-400 text-cream-50 transition-colors hover:bg-terracotta-500"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/p/Pizzeria-Arcadia-Povoletto-100063693066513/?locale=it_IT"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-terracotta-400 text-cream-50 transition-colors hover:bg-terracotta-500"
               >
