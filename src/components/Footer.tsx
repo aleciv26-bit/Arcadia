@@ -15,17 +15,20 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-wood-700 text-cream-200 transition-colors hover:bg-terracotta-400 hover:text-cream-50"
+            <a 
+            href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Instagram"
             >
               <Instagram className="h-5 w-5" />
             </a>
-            <a
-              href="#"
+            <!-- Link Facebook -->
+            <a 
+              href="https://www.facebook.com/p/Pizzeria-Arcadia-Povoletto-100063693066513/?locale=it_IT" 
+              target="_blank" 
+              rel="noopener noreferrer"
               aria-label="Facebook"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-wood-700 text-cream-200 transition-colors hover:bg-terracotta-400 hover:text-cream-50"
             >
               <Facebook className="h-5 w-5" />
             </a>
