@@ -45,9 +45,11 @@ export default function Philosophy() {
             Il gusto autentico, pensato per tutti.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-wood-600">
-            Ad Arcadia crediamo che la pizza sia un piatto universale. Per questo
-            curiamo ogni impasto con lievitazioni lunghe e farine selezionate,
-            scegliamo ingredienti di stagione e dedichiamo la massima attenzione
+            Da Arcadia, ci impegniamo a offrirvi solo il meglio. 
+            Ogni pizza è realizzata con ingredienti selezionati, provenienti 
+            da produttori locali del Friuli Venezia Giulia, per garantire freschezza 
+            e qualità. La nostra pasta è a lievitazione naturale, 
+            per una digeribilità ottimale e un sapore inconfondibile.
             al <strong className="font-semibold text-terracotta-500">Senza Glutine</strong>,
             perché nessuno debba rinunciare al piacere di un buon pasto.
           </p>
