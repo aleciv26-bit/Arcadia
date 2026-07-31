@@ -50,7 +50,7 @@ export default function Philosophy() {
             da produttori locali del Friuli Venezia Giulia, per garantire freschezza 
             e qualità. La nostra pasta è a lievitazione naturale, 
             per una digeribilità ottimale e un sapore inconfondibile.
-            al <strong className="font-semibold text-terracotta-500">Senza Glutine</strong>,
+            Anche <strong className="font-semibold text-terracotta-500">Senza Glutine</strong>,
             perché nessuno debba rinunciare al piacere di un buon pasto.
           </p>
 
