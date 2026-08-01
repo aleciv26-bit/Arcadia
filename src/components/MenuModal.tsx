@@ -1,115 +1,97 @@
-import { useEffect } from 'react';
-import { X, Download, Globe, Leaf } from 'lucide-react';
-import { menuLanguages } from '@/data';
+import { X, Globe, Download } from 'lucide-react';
 
-type MenuModalProps = {
-  open: boolean;
+interface MenuModalProps {
+  isOpen: boolean;
   onClose: () => void;
-};
+}
 
-export default function MenuModal({ open, onClose }: MenuModalProps) {
-  useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-    };
-    document.addEventListener('keydown', onKey);
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      document.body.style.overflow = '';
-    };
-  }, [open, onClose]);
+export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
+  if (!isOpen) return null;
 
-  if (!open) return null;
+  // Ricordati di verificare che i nomi dei file PDF corrispondano a quelli nella cartella /public
+  const menuOptions = [
+    {
+      code: 'it',
+      name: 'Italiano',
+      subtitle: '+ Senza Glutine (in fondo)',
+      flag: '🇮🇹',
+      file: '/menu-italiano.pdf', 
+    },
+    {
+      code: 'en',
+      name: 'English',
+      subtitle: null,
+      flag: '🇬🇧',
+      file: '/menu-english.pdf',
+    },
+    {
+      code: 'de',
+      name: 'Deutsch',
+      subtitle: null,
+      flag: '🇩🇪',
+      file: '/menu-deutsch.pdf',
+    },
+  ];
 
   return (
-    <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Scarica il Menù"
-    >
-      <div
-        className="absolute inset-0 bg-wood-900/70 backdrop-blur-sm animate-fade-in"
-        onClick={onClose}
-        aria-hidden="true"
-      />
-      <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-cream-50 shadow-2xl animate-fade-up">
-        <button
-          onClick={onClose}
-          aria-label="Chiudi"
-          className="absolute right-4 top-4 z-10 rounded-full p-2 text-wood-500 transition-colors hover:bg-cream-200 hover:text-wood-700"
-        >
-          <X className="h-5 w-5" />
-        </button>
-
-        <div className="bg-wood-700 px-8 py-6 text-center">
-          <h3 className="font-serif text-2xl text-cream-50">Scarica il Menù</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+      <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-cream-50 shadow-2xl">
+        
+        {/* Header del Modal */}
+        <div className="bg-wood-900 px-6 py-6 text-center text-cream-50">
+          <button
+            onClick={onClose}
+            className="absolute right-4 top-4 text-cream-300 transition-colors hover:text-cream-50"
+            aria-label="Chiudi"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          <h3 className="font-serif text-2xl font-bold">Scarica il Menù</h3>
           <p className="mt-1 text-sm text-cream-300">
-            Scegli la lingua e la versione del menù
+            Scegli la lingua per scaricare il PDF
           </p>
         </div>
 
-        <div className="space-y-6 p-8">
-          <div>
-            <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-honey-500">
-              <Globe className="h-4 w-4" />
-              <span>Lingua</span>
-            </div>
-            <div className="grid grid-cols-3 gap-3">
-              {menuLanguages.map((lang) => (
-                <div
-                  key={lang.label}
-                  className="flex flex-col items-center gap-1 rounded-xl border border-cream-300 bg-cream-100 px-3 py-4 text-center transition-colors hover:border-terracotta-300 hover:bg-cream-200"
-                >
-                  <span className="text-2xl">{lang.flag}</span>
-                  <span className="text-sm font-medium text-wood-700">
-                    {lang.label}
-                  </span>
-                </div>
-              ))}
-            </div>
+        {/* Corpo del Modal con le 3 Lingue */}
+        <div className="p-6">
+          <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-honey-600">
+            <Globe className="h-4 w-4" />
+            <span>Seleziona Lingua</span>
           </div>
 
-          <div>
-            <div className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-honey-500">
-              <Leaf className="h-4 w-4" />
-              <span>Versione</span>
-            </div>
-            <div className="space-y-3">
-              {menuLanguages.map((lang) => (
-                <div
-                  key={lang.label}
-                  className="rounded-xl border border-cream-300 bg-cream-100 p-4"
-                >
-                  <p className="mb-2 flex items-center gap-2 text-sm font-semibold text-wood-700">
-                    <span className="text-lg">{lang.flag}</span>
-                    {lang.label}
-                  </p>
-                  <div className="grid grid-cols-2 gap-2">
-                    <a
-                      href={lang.files.standard}
-                      download
-                      className="flex items-center justify-center gap-1.5 rounded-lg bg-terracotta-400 px-3 py-2.5 text-xs font-semibold text-cream-50 transition-colors hover:bg-terracotta-500"
-                    >
-                      <Download className="h-3.5 w-3.5" />
-                      Standard
-                    </a>
-                    <a
-                      href={lang.files.glutenfree}
-                      download
-                      className="flex items-center justify-center gap-1.5 rounded-lg border border-honey-400 bg-honey-50 px-3 py-2.5 text-xs font-semibold text-honey-700 transition-colors hover:bg-honey-100"
-                    >
-                      <Download className="h-3.5 w-3.5" />
-                      Senza Glutine
-                    </a>
+          <div className="grid gap-3">
+            {menuOptions.map((option) => (
+              <a
+                key={option.code}
+                href={option.file}
+                download
+                onClick={onClose}
+                className="group flex items-center justify-between rounded-xl border border-cream-300 bg-cream-100/50 p-4 transition-all hover:border-honey-400 hover:bg-cream-100 hover:shadow-md"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl" role="img" aria-label={option.name}>
+                    {option.flag}
+                  </span>
+                  <div className="text-left">
+                    <p className="font-semibold text-wood-800 transition-colors group-hover:text-honey-600">
+                      {option.name}
+                    </p>
+                    {option.subtitle && (
+                      <p className="text-xs font-medium text-terracotta-500">
+                        {option.subtitle}
+                      </p>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
+
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-cream-200 text-wood-700 transition-colors group-hover:bg-honey-500 group-hover:text-cream-50">
+                  <Download className="h-4 w-4" />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
+
       </div>
     </div>
   );
