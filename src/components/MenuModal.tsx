@@ -8,28 +8,27 @@ interface MenuModalProps {
 export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
   if (!isOpen) return null;
 
-  // Ricordati di verificare che i nomi dei file PDF corrispondano a quelli nella cartella /public
   const menuOptions = [
     {
       code: 'it',
       name: 'Italiano',
       subtitle: '+ Senza Glutine (in fondo)',
       flag: '🇮🇹',
-      file: '/menu-italiano.pdf', 
+      file: '/menu-it.pdf', 
     },
     {
       code: 'en',
       name: 'English',
       subtitle: null,
       flag: '🇬🇧',
-      file: '/menu-english.pdf',
+      file: '/menu-en.pdf',
     },
     {
       code: 'de',
       name: 'Deutsch',
       subtitle: null,
       flag: '🇩🇪',
-      file: '/menu-deutsch.pdf',
+      file: '/menu-de.pdf',
     },
   ];
 
