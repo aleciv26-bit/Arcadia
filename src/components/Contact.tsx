@@ -1,4 +1,4 @@
-import { MapPin, Phone, Star, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Star, Clock, Instagram, Facebook } from 'lucide-react';
 
 const contactItems = [
   {
@@ -13,6 +13,16 @@ const contactItems = [
     value: '351 491 7569',
     href: 'tel:+393514917569',
   },
+];
+
+const openingHours = [
+  { day: 'Lunedì', hours: '11:00–15:00, 18:00–00:00' },
+  { day: 'Martedì', hours: '11:00–15:00, 18:00–00:00' },
+  { day: 'Mercoledì', hours: 'Chiuso', isClosed: true },
+  { day: 'Giovedì', hours: '11:00–15:00, 18:00–00:00' },
+  { day: 'Venerdì', hours: '11:00–15:00, 18:00–00:00' },
+  { day: 'Sabato', hours: '11:00–15:00, 18:00–00:00' },
+  { day: 'Domenica', hours: '11:00–15:00, 18:00–00:00' },
 ];
 
 export default function Contact() {
@@ -54,6 +64,28 @@ export default function Contact() {
                   </div>
                 </div>
               ))}
+
+              {/* Orari di Apertura */}
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-terracotta-100 text-terracotta-500">
+                  <Clock className="h-6 w-6" />
+                </div>
+                <div className="w-full">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-honey-500 mb-2">
+                    Orari di Apertura
+                  </p>
+                  <div className="space-y-1 text-sm font-medium text-wood-700">
+                    {openingHours.map((item) => (
+                      <div key={item.day} className="flex justify-between border-b border-cream-200/60 pb-1">
+                        <span>{item.day}</span>
+                        <span className={item.isClosed ? 'font-semibold text-terracotta-500' : 'text-wood-600'}>
+                          {item.hours}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               {/* Rating */}
               <div className="flex items-start gap-4">
