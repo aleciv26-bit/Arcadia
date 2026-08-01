@@ -34,7 +34,7 @@ export default function Hero() {
           </a>
 
           {/* TASTO CHIAMA DIRETTAMENTE */}
-          <a href="tel:+390432678900" className="btn-outline">
+          <a href="tel:+393514917569" className="btn-outline">
             Prenota un Tavolo
           </a>
         </div>
