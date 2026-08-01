@@ -1,12 +1,12 @@
 import { X, Globe, Download } from 'lucide-react';
 
 interface MenuModalProps {
-  isOpen: boolean;
+  open: boolean;
   onClose: () => void;
 }
 
-export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
-  if (!isOpen) return null;
+export default function MenuModal({ open, onClose }: MenuModalProps) {
+  if (!open) return null;
 
   const menuOptions = [
     {
@@ -14,7 +14,7 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
       name: 'Italiano',
       subtitle: '+ Senza Glutine (in fondo)',
       flag: '🇮🇹',
-      file: '/menu-it.pdf', 
+      file: '/menu-it.pdf',
     },
     {
       code: 'en',
@@ -33,13 +33,13 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
       <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-cream-50 shadow-2xl">
-        
-        {/* Header del Modal */}
+        {/* Header */}
         <div className="bg-wood-900 px-6 py-6 text-center text-cream-50">
           <button
             onClick={onClose}
+            type="button"
             className="absolute right-4 top-4 text-cream-300 transition-colors hover:text-cream-50"
             aria-label="Chiudi"
           >
@@ -51,7 +51,7 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
           </p>
         </div>
 
-        {/* Corpo del Modal con le 3 Lingue */}
+        {/* Content */}
         <div className="p-6">
           <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-honey-600">
             <Globe className="h-4 w-4" />
@@ -90,7 +90,6 @@ export default function MenuModal({ isOpen, onClose }: MenuModalProps) {
             ))}
           </div>
         </div>
-
       </div>
     </div>
   );
