@@ -29,11 +29,13 @@ export default function Header() {
       }`}
     >
       <div className="container-x flex items-center justify-between">
-        <a
-          href="#home"
-          className="font-serif text-2xl font-bold tracking-wide text-cream-50 transition-colors hover:text-honey-300"
-        >
-          Arcadia
+        {/* LOGO INSERITO QUI */}
+        <a href="#home" className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Arcadia Logo"
+            className="h-10 w-auto object-contain transition-transform hover:scale-105 md:h-12"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">
