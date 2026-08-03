@@ -25,37 +25,39 @@ export default function Menu({ onOpenModal }: MenuSectionProps) {
         </div>
 
         {/* Dish cards */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {dishes.map((dish) => (
             <article
               key={dish.id}
-              className="group overflow-hidden rounded-2xl bg-wood-700 shadow-lg ring-1 ring-wood-600/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-wood-900/40"
+              className="group flex flex-col justify-between overflow-hidden rounded-2xl bg-wood-700 shadow-lg ring-1 ring-wood-600/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-wood-900/40"
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={dish.image}
-                  alt={dish.name}
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                {dish.tag && (
-                  <span className="absolute left-3 top-3 rounded-full bg-terracotta-400 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cream-50 shadow-md">
-                    {dish.tag}
-                  </span>
-                )}
-              </div>
-              <div className="p-6">
-                <div className="flex items-baseline justify-between gap-2">
-                  <h3 className="font-serif text-xl font-semibold text-cream-50">
-                    {dish.name}
-                  </h3>
-                  <span className="font-serif text-lg font-bold text-honey-300">
-                    {dish.price}
-                  </span>
+              <div>
+                <div className="relative overflow-hidden">
+                  <img
+                    src={dish.image}
+                    alt={dish.name}
+                    className="h-28 w-full object-cover sm:h-36 sm:aspect-[4/3] transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  {dish.tag && (
+                    <span className="absolute left-2 top-2 rounded-full bg-terracotta-400 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-cream-50 shadow-md sm:left-3 sm:top-3 sm:px-3 sm:py-1 sm:text-xs">
+                      {dish.tag}
+                    </span>
+                  )}
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-cream-300">
-                  {dish.description}
-                </p>
+                <div className="p-3 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                    <h3 className="font-serif text-base sm:text-xl font-semibold text-cream-50 leading-tight">
+                      {dish.name}
+                    </h3>
+                    <span className="font-serif text-sm sm:text-lg font-bold text-honey-300 shrink-0">
+                      {dish.price}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-cream-300 line-clamp-3 sm:line-clamp-none">
+                    {dish.description}
+                  </p>
+                </div>
               </div>
             </article>
           ))}
