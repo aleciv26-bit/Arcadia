@@ -23,18 +23,18 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
+        scrolled || open
           ? 'bg-wood-800/95 py-3 shadow-lg shadow-wood-900/20 backdrop-blur-md'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="container-x flex items-center justify-between">
-        {/* LOGO INSERITO QUI */}
+        {/* LOGO */}
         <a href="#home" className="flex items-center gap-2">
           <img
             src="/logo.png"
             alt="Arcadia Logo"
-            className="h-16 w-auto object-contain transition-transform hover:scale-105 md:h-12"
+            className="h-10 w-auto object-contain transition-transform hover:scale-105 md:h-12"
           />
         </a>
 
@@ -82,13 +82,13 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - SFONDO SCURO COPRENTE AGGIUNTO */}
       <div
         className={`overflow-hidden transition-all duration-300 lg:hidden ${
-          open ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          open ? 'max-h-screen opacity-100 py-4' : 'max-h-0 opacity-0 py-0'
         }`}
       >
-        <nav className="container-x mt-4 flex flex-col gap-1 border-t border-cream-100/10 pt-4">
+        <nav className="container-x flex flex-col gap-1 border-t border-cream-100/10 pt-4 bg-wood-800/95 backdrop-blur-lg rounded-b-2xl shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -100,7 +100,7 @@ export default function Header() {
             </a>
           ))}
           {/* Link Social Mobile */}
-          <div className="mt-2 flex items-center gap-4 px-4 pb-4">
+          <div className="mt-2 flex items-center gap-4 px-4 pb-2 pt-2 border-t border-cream-100/10">
             <a
               href="https://www.instagram.com/explore/locations/1632530180136762/pizzeria-arcadia-povoletto/"
               target="_blank"
