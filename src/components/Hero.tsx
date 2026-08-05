@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden"
+      className="relative flex min-h-screen items-start justify-center pt-28 sm:pt-32 overflow-hidden"
     >
       {/* Background image naturale e luminosa */}
       <div className="absolute inset-0">
@@ -14,17 +14,17 @@ export default function Hero() {
           className="h-full w-full object-cover animate-slow-zoom"
           loading="eager"
         />
-        {/* Leggerissimo velo sfumato per far risaltare il testo bianco sul cielo */}
+        {/* Leggerissimo velo sfumato in alto per il contrasto del testo */}
         <div className="absolute inset-0 bg-gradient-to-b from-wood-900/40 via-transparent to-wood-900/20" />
       </div>
 
-      {/* Content forzato verso l'alto con margine negativo (-mt-20 / -mt-32) */}
-      <div className="container-x relative z-10 -mt-20 flex flex-col items-center text-center w-full sm:-mt-28 md:-mt-32">
+      {/* Content posizionato in alto nel cielo (items-start + pt-28/pt-32) */}
+      <div className="container-x relative z-10 flex flex-col items-center text-center w-full">
         <p className="eyebrow mb-2 text-honey-300 font-semibold tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] animate-fade-in">
           Ristorante Pizzeria · Povoletto (UD)
         </p>
 
-        {/* Titolo spostato nel cielo */}
+        {/* Titolo forzato nel cielo */}
         <h1 className="max-w-4xl font-serif text-5xl font-bold leading-tight text-cream-50 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)] md:text-7xl lg:text-8xl animate-fade-up">
           Arcadia
         </h1>
