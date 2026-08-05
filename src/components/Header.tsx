@@ -34,7 +34,7 @@ export default function Header() {
           <img
             src="/logo.png"
             alt="Arcadia Logo"
-            className="h-10 w-auto object-contain transition-transform hover:scale-105 md:h-16"
+            className="h-10 w-auto object-contain transition-transform hover:scale-105 md:h-20"
           />
         </a>
 
