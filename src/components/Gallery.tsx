@@ -14,22 +14,17 @@ export default function Gallery() {
           </p>
         </div>
 
+        {/* Griglia uniforme: tutte le immagini uguali */}
         <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {galleryImages.map((src, i) => (
             <div
               key={src}
-              className={`group relative overflow-hidden rounded-xl shadow-md ${
-                i === 0 || i === 5 ? 'md:col-span-2 md:row-span-2' : ''
-              }`}
+              className="group relative overflow-hidden rounded-xl bg-wood-800 shadow-md aspect-[4/3] w-full"
             >
               <img
                 src={src}
                 alt={`Galleria Arcadia ${i + 1}`}
-                className={`w-full object-cover transition-transform duration-700 group-hover:scale-110 ${
-                  i === 0 || i === 5
-                    ? 'aspect-square md:aspect-[2/1]'
-                    : 'aspect-[4/3]'
-                }`}
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-wood-900/0 transition-colors duration-500 group-hover:bg-wood-900/30" />
