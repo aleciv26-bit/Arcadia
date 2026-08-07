@@ -34,7 +34,6 @@ function App() {
         <Menu onOpenModal={() => setMenuOpen(true)} />
         <Gallery />
         <Contact />
-        <Footer />
       </main>
       <Footer />
       <MenuModal open={menuOpen} onClose={() => setMenuOpen(false)} />
