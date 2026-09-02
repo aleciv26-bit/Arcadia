@@ -1,4 +1,4 @@
-import { MapPin, Phone, Star, Clock, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Star, Clock, Instagram, Facebook, ExternalLink } from 'lucide-react';
 
 const contactItems = [
   {
@@ -87,7 +87,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Rating */}
+              {/* Rating + Pulsante Recensione */}
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-honey-100 text-honey-600">
                   <Star className="h-6 w-6 fill-honey-400 text-honey-400" />
@@ -99,6 +99,15 @@ export default function Contact() {
                   <p className="text-lg font-medium text-wood-700">
                     4,4 / 5 · oltre 1.100 recensioni
                   </p>
+                  <a
+                    href="https://www.google.com/search?sca_esv=310041c079f8198e&sxsrf=APpeQnvlx_KFAT3g6XczeTA4RSvPJlu00Q:1788333531579&q=arcadia+povoletto&si=APenkKn5T4YN59srr511wD6k6Pufj9DEzRUvB1XJSwUeeT5afn9axYtyL8lPPBCtBIj3sOIFzRN1csmxyHK7wyGeZwGSgf2mvtkyoqg3T4TKGTdBpSHhINo%3D&uds=AJ5uw1_rUfMqrtZe7QfpdFGwaPC3VDg2wfLxxVqRW5yvjorc5kCe50gcV-Q7tt65o3HF10CBKM7n3xLlu2jnSC2gCn2t9LlQmeuQdC4-Su_PlNS57o2-yZc&sa=X&sqi=2&ved=2ahUKEwjdyo7Hrc-WAxWKhv0HHYsdB2QQ3PALegQIHhAE&biw=1284&bih=821&dpr=2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-lg bg-terracotta-500 px-3.5 py-2 text-xs font-semibold text-cream-50 transition-all hover:bg-terracotta-600 shadow-md hover:shadow-lg"
+                  >
+                    <span>Lascia la tua recensione</span>
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
                 </div>
               </div>
             </div>
